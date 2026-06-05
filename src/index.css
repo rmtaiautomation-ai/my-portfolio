@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-cyan: #3b82f6;
+  --color-brand-blue: #3b82f6;
+  --color-brand-dark: var(--bg-primary);
+  --color-brand-card: var(--bg-card);
+  --color-brand-border: var(--border-color);
+  --color-brand-text: var(--text-primary);
+  --color-brand-text-muted: var(--text-muted);
+  
+  --animate-marquee: marquee 40s linear infinite;
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+}
+
+:root {
+  --bg-primary: #f8fafc;
+  --bg-card: #ffffff;
+  --border-color: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+}
+
+.dark {
+  --bg-primary: #070b14;
+  --bg-card: #0f1629;
+  --border-color: #1e293b;
+  --text-primary: #ffffff;
+  --text-muted: #94a3b8;
+}
+
+body {
+  background-color: var(--color-brand-dark);
+  color: var(--color-brand-text);
+  margin: 0;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom glow utility for buttons and cards */
+.neon-glow {
+  box-shadow: 0 0 20px 2px rgba(59, 130, 246, 0.15);
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #3b82f6 0%, #3b82f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-brand-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-brand-border);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-brand-blue);
+}
