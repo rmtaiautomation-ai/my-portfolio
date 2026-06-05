@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Workflow, Bot, Settings, Zap, Database, Globe } from 'lucide-react';
 
 const services = [
