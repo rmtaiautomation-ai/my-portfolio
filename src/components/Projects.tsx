@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react';
 import { Zap } from 'lucide-react';
 
 import smartLeadCaptureImg from '../assets/smart-lead-capture.png';
