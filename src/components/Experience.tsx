@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { Briefcase, GraduationCap } from 'lucide-react';
 
 const carouselApps = [
