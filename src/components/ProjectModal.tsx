@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { X, PlayCircle, Zap, CheckCircle2 } from 'lucide-react';
 
 interface ProjectModalProps {
