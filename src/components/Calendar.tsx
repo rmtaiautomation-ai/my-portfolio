@@ -1,13 +1,13 @@
-<<<<<<< HEAD
+
 
 
 import { useEffect } from 'react';
 
-=======
+
 import React, { useEffect } from 'react';
 import { Mail, Phone, Link } from 'lucide-react';
 
->>>>>>> 2294c63 (Updated project modal functionality)
+
 export default function Calendar() {
   useEffect(() => {
     // Add the Calendly script on mount
