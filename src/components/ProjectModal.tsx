@@ -16,7 +16,6 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         {/* Header */}
         <div className="flex items-center justify-between p-6 border-b border-brand-border">
           <h2 className="text-2xl font-bold text-brand-text flex items-center gap-2">
-            <Zap className="text-brand-cyan" size={24} />
             {project.title}
           </h2>
           <button 
@@ -28,11 +27,23 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
         </div>
 
         <div className="p-6 overflow-y-auto max-h-[75vh]">
-          {/* Video Placeholder */}
-          <div className="w-full aspect-video bg-brand-dark rounded-xl border border-brand-border flex flex-col items-center justify-center text-brand-text-muted mb-8 group cursor-pointer hover:border-brand-cyan transition-colors">
-            <PlayCircle size={64} className="mb-4 opacity-50 group-hover:opacity-100 group-hover:text-brand-cyan transition-all" />
-            <p className="font-medium tracking-wide">[ Video Player Placeholder ]</p>
-          </div>
+          {/* Video Player */}
+          {project.details?.videoUrl ? (
+            <div className="w-full aspect-video bg-brand-dark rounded-xl border border-brand-border mb-8 overflow-hidden">
+              <iframe 
+                src={project.details.videoUrl} 
+                frameBorder="0" 
+                allowFullScreen 
+                className="w-full h-full"
+                title="Project Walkthrough Video"
+              ></iframe>
+            </div>
+          ) : (
+            <div className="w-full aspect-video bg-brand-dark rounded-xl border border-brand-border flex flex-col items-center justify-center text-brand-text-muted mb-8 group cursor-pointer hover:border-brand-cyan transition-colors">
+              <PlayCircle size={64} className="mb-4 opacity-50 group-hover:opacity-100 group-hover:text-brand-cyan transition-all" />
+              <p className="font-medium tracking-wide">[ Video Player Placeholder ]</p>
+            </div>
+          )}
 
           {/* Details Content */}
           {project.details && (
@@ -60,9 +71,21 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
 
               {/* Architecture */}
               <div>
-                <h3 className="text-xl font-bold text-brand-text mb-4 flex items-center gap-2">
-                  Technical Architecture (Data Flow)
-                </h3>
+                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                  <h3 className="text-xl font-bold text-brand-text flex items-center gap-2">
+                    Technical Architecture (Data Flow)
+                  </h3>
+                  {project.details.architectureLink && (
+                    <a 
+                      href={project.details.architectureLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-xs font-bold text-brand-cyan hover:text-brand-text transition-colors border border-brand-cyan hover:border-brand-text px-3 py-1.5 rounded-lg flex items-center gap-1 w-fit"
+                    >
+                      View Documentation &rarr;
+                    </a>
+                  )}
+                </div>
                 <div className="grid grid-cols-1 gap-4">
                   {project.details.architecture.map((step: any, idx: number) => (
                     <div key={idx} className="flex items-start gap-4 p-4 rounded-lg bg-brand-dark/50 border border-brand-border">

@@ -1,11 +1,15 @@
+<<<<<<< HEAD
 import { useState, useEffect } from 'react';
 
+=======
+import React, { useState, useEffect } from 'react';
+>>>>>>> 2294c63 (Updated project modal functionality)
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Services from './components/Services';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Testimonials from './components/Testimonials';
 import Calendar from './components/Calendar';
 
 function App() {
@@ -28,10 +32,10 @@ function App() {
       <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
       <main>
         <Hero />
+        <About />
         <Services />
         <Experience />
         <Projects />
-        <Testimonials />
         <Calendar />
       </main>
       

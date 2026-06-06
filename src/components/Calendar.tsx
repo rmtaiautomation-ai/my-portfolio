@@ -1,7 +1,13 @@
+<<<<<<< HEAD
 
 
 import { useEffect } from 'react';
 
+=======
+import React, { useEffect } from 'react';
+import { Mail, Phone, Link } from 'lucide-react';
+
+>>>>>>> 2294c63 (Updated project modal functionality)
 export default function Calendar() {
   useEffect(() => {
     // Add the Calendly script on mount
@@ -29,13 +35,37 @@ export default function Calendar() {
           </p>
         </div>
 
-        <div className="w-full max-w-4xl mx-auto bg-brand-dark rounded-xl overflow-hidden shadow-2xl">
+        <div className="w-full max-w-4xl mx-auto bg-brand-dark rounded-xl overflow-hidden shadow-2xl mb-12">
           {/* Calendly inline widget */}
           <div 
             className="calendly-inline-widget" 
             data-url="https://calendly.com/rommeltima07/new-meeting" 
             style={{ minWidth: '320px', height: '700px' }}
           ></div>
+        </div>
+
+        {/* Contact Info */}
+        <div className="flex flex-col md:flex-row items-center justify-center gap-8 md:gap-16 mt-16 text-brand-text-muted">
+          <a href="mailto:rommeltima07@gmail.com" className="flex items-center gap-3 hover:text-brand-cyan transition-colors">
+            <div className="bg-brand-dark p-3 rounded-full border border-brand-border">
+              <Mail className="text-brand-cyan" size={24} />
+            </div>
+            <span className="font-medium">rommeltima07@gmail.com</span>
+          </a>
+          
+          <a href="tel:09770124038" className="flex items-center gap-3 hover:text-brand-cyan transition-colors">
+            <div className="bg-brand-dark p-3 rounded-full border border-brand-border">
+              <Phone className="text-brand-cyan" size={24} />
+            </div>
+            <span className="font-medium">09770124038</span>
+          </a>
+
+          <a href="https://www.linkedin.com/in/rommel-tima-1940561ab/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 hover:text-brand-cyan transition-colors">
+            <div className="bg-brand-dark p-3 rounded-full border border-brand-border">
+              <Link className="text-brand-cyan" size={24} />
+            </div>
+            <span className="font-medium">LinkedIn Profile</span>
+          </a>
         </div>
       </div>
     </section>

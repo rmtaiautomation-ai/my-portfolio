@@ -1,20 +1,79 @@
 
+import React, { useState, useEffect } from 'react';
 import { ChevronDown, Mail, MapPin } from 'lucide-react';
 
+const WORDS = ["AI Specialist", "Rommel"];
+const OPTIMIZING_PHRASES = [
+  "Optimizing...",
+  "Architecting workflows...",
+  "Vibe coding with AI...",
+  "Connecting disparate APIs...",
+  "Eliminating bottlenecks...",
+  "Deploying scalable systems..."
+];
+
 export default function Hero() {
+  const [text, setText] = useState('');
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [loopNum, setLoopNum] = useState(0);
+  const [phraseIndex, setPhraseIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPhraseIndex((prev) => (prev + 1) % OPTIMIZING_PHRASES.length);
+    }, 5000);
+    return () => clearInterval(interval);
+  }, []);
+
+  useEffect(() => {
+    const currentWord = WORDS[loopNum % WORDS.length];
+    
+    const timeout = setTimeout(() => {
+      if (isDeleting) {
+        setText(currentWord.substring(0, text.length - 1));
+        if (text.length === 0) {
+          setIsDeleting(false);
+          setLoopNum(loopNum + 1);
+        }
+      } else {
+        setText(currentWord.substring(0, text.length + 1));
+        if (text.length === currentWord.length) {
+          setTimeout(() => setIsDeleting(true), 2000);
+        }
+      }
+    }, isDeleting ? 50 : 150);
+
+    return () => clearTimeout(timeout);
+  }, [text, isDeleting, loopNum]);
   return (
     <section id="home" className="relative min-h-screen flex flex-col justify-center items-center text-center px-6 pt-20">
       
       {/* Background styling for glow/network can go here */}
       <div className="absolute inset-0 z-0 pointer-events-none bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-brand-blue/10 via-brand-dark to-brand-dark"></div>
 
-      <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto">
-        <div className="text-brand-blue text-sm font-mono tracking-widest animate-pulse">
-          Optimizing...
+      <div className="relative z-10 flex flex-col items-center gap-6 max-w-4xl mx-auto w-full">
+        <div className="text-brand-blue text-sm font-mono tracking-widest relative h-6 w-full flex justify-center items-center overflow-visible">
+          {OPTIMIZING_PHRASES.map((phrase, idx) => {
+            const isPrev = idx === phraseIndex - 1 || (phraseIndex === 0 && idx === OPTIMIZING_PHRASES.length - 1);
+            return (
+              <div 
+                key={phrase}
+                className={`absolute w-full text-center transition-all duration-700 ease-in-out ${
+                  idx === phraseIndex 
+                    ? 'opacity-100 translate-y-0' 
+                    : isPrev
+                      ? 'opacity-0 -translate-y-6 pointer-events-none'
+                      : 'opacity-0 translate-y-6 pointer-events-none'
+                }`}
+              >
+                {phrase}
+              </div>
+            );
+          })}
         </div>
         
         <h1 className="text-6xl md:text-8xl font-bold tracking-tight text-brand-text">
-          I'm <span className="text-brand-blue">&gt;</span> <span className="text-brand-blue">AI Specialist</span>
+          I'm <span className="text-brand-blue">&gt;</span> <span className="text-brand-blue">{text}<span className="animate-pulse font-light opacity-70">|</span></span>
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-semibold text-brand-text mt-2">
@@ -44,10 +103,22 @@ export default function Hero() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-4 mt-8">
-          <button className="bg-brand-blue hover:bg-blue-600 text-white font-bold px-8 py-3 rounded text-sm tracking-wider transition-colors shadow-lg shadow-brand-blue/20">
+          <button 
+            onClick={() => {
+              const el = document.getElementById('projects');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-brand-blue hover:bg-blue-600 text-white font-bold px-8 py-3 rounded text-sm tracking-wider transition-colors shadow-lg shadow-brand-blue/20"
+          >
             VIEW PROJECTS
           </button>
-          <button className="bg-transparent hover:bg-brand-blue/10 text-brand-text font-bold px-8 py-3 rounded text-sm tracking-wider transition-colors border border-brand-blue/50">
+          <button 
+            onClick={() => {
+              const el = document.getElementById('contact');
+              if (el) el.scrollIntoView({ behavior: 'smooth' });
+            }}
+            className="bg-transparent hover:bg-brand-blue/10 text-brand-text font-bold px-8 py-3 rounded text-sm tracking-wider transition-colors border border-brand-blue/50"
+          >
             GET IN TOUCH
           </button>
         </div>

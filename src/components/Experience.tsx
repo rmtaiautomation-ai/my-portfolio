@@ -88,7 +88,7 @@ export default function Experience() {
               <div>
                 <h4 className="text-xs font-mono text-brand-text-muted tracking-widest uppercase mb-3">Automation</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Zapier', 'Make.com', 'n8n'].map(skill => (
+                  {['Make.com', 'n8n'].map(skill => (
                     <span key={skill} className="bg-brand-card border border-brand-border text-brand-text-muted px-3 py-1.5 rounded-md text-sm hover:border-brand-cyan hover:text-brand-text transition-colors cursor-default">
                       {skill}
                     </span>
@@ -99,7 +99,7 @@ export default function Experience() {
               <div>
                 <h4 className="text-xs font-mono text-brand-text-muted tracking-widest uppercase mb-3">Agentic AI & Vibe Coding</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Lovable', 'Google AI Studio', 'Stitch', 'Antigravity', 'Claude Code'].map(skill => (
+                  {['Google AI Studio', 'Antigravity'].map(skill => (
                     <span key={skill} className="bg-brand-card border border-brand-border text-brand-text-muted px-3 py-1.5 rounded-md text-sm hover:border-brand-cyan hover:text-brand-text transition-colors cursor-default">
                       {skill}
                     </span>
@@ -121,7 +121,7 @@ export default function Experience() {
               <div>
                 <h4 className="text-xs font-mono text-brand-text-muted tracking-widest uppercase mb-3">Productivity</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Google Workspace', 'Notion', 'Trello', 'Asana', 'WordPress', 'Canva', 'Airtable', 'Calendly'].map(skill => (
+                  {['Google Workspace', 'Notion', 'Airtable', 'Calendly'].map(skill => (
                     <span key={skill} className="bg-brand-card border border-brand-border text-brand-text-muted px-3 py-1.5 rounded-md text-sm hover:border-brand-cyan hover:text-brand-text transition-colors cursor-default">
                       {skill}
                     </span>
