@@ -1,8 +1,7 @@
 
 import React, { useState } from 'react';
-=======
 import { useState } from 'react';
->>>>>>> 2c15a7a0f8b461459f54db23d7d5c08623da8998
+
 import { Zap } from 'lucide-react';
 
 import smartLeadCaptureImg from '../assets/smart-lead-capture.png';
