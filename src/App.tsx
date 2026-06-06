@@ -1,8 +1,5 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
-=======
-import { useState, useEffect } from 'react';
->>>>>>> 2c15a7a0f8b461459f54db23d7d5c08623da8998
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Services from './components/Services';
