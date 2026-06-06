@@ -1,9 +1,8 @@
 
 import React, { useEffect } from 'react';
 
-=======
 import { useEffect } from 'react';
->>>>>>> 2c15a7a0f8b461459f54db23d7d5c08623da8998
+
 export default function Calendar() {
   useEffect(() => {
     // Add the Calendly script on mount
