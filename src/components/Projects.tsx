@@ -1,14 +1,9 @@
 
 import { useState } from 'react';
-
-
 import React, { useState } from 'react';
-
-import { Zap } from 'lucide-react';
 
 import smartLeadCaptureImg from '../assets/make111.jpg';
 import hrSentimentImg from '../assets/hr-sentiment.png';
-import plumbingCrmImg from '../assets/plumbing-crm.jpg';
 import highLevelImg from '../assets/high11.jpg';
 import customerSupportImg from '../assets/n8n111.jpg';
 import autonomousVideoImg from '../assets/autonomous-video-engine.jpg';
