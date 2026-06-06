@@ -1,9 +1,8 @@
-<<<<<<< HEAD
+
 import { useState, useEffect } from 'react';
 
-=======
 import React, { useState, useEffect } from 'react';
->>>>>>> 2294c63 (Updated project modal functionality)
+
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
