@@ -1,10 +1,9 @@
-<<<<<<< HEAD
 
 import { useState } from 'react';
 
-=======
+
 import React, { useState } from 'react';
->>>>>>> 2294c63 (Updated project modal functionality)
+
 import { Zap } from 'lucide-react';
 
 import smartLeadCaptureImg from '../assets/make111.jpg';
