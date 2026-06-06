@@ -1,10 +1,4 @@
-
-
-
-
-
-
-import React, { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Mail, Phone, Link } from 'lucide-react';
 
 
