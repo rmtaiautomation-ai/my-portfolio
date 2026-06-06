@@ -1,6 +1,5 @@
 
 import { useState } from 'react';
-import React, { useState } from 'react';
 
 import smartLeadCaptureImg from '../assets/make111.jpg';
 import hrSentimentImg from '../assets/hr-sentiment.png';
