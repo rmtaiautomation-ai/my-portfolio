@@ -1,5 +1,5 @@
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { ChevronDown, Mail, MapPin } from 'lucide-react';
 
 const WORDS = ["AI Specialist", "Rommel"];
