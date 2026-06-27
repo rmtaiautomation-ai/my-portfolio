@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-
->>>>>>> 6a52ea4 (Updated project modal functionality)
 import profileImg from '../assets/profile.jpg';
 
 export default function About() {

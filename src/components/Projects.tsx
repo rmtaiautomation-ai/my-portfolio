@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 6a52ea4 (Updated project modal functionality)
 import { useState } from 'react';
 
 import smartLeadCaptureImg from '../assets/make111.jpg';
