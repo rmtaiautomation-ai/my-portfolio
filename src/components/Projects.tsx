@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 6a52ea4 (Updated project modal functionality)
 import { useState } from 'react';
 
 import smartLeadCaptureImg from '../assets/make111.jpg';
@@ -29,7 +32,8 @@ const projects = [
         { label: 'Asynchronous Lifecycle', description: 'Intelligent API polling mechanisms manage Google Veo rendering queues, waiting for completion before handling binary storage in Google Drive.' },
         { label: 'Multi-Platform Distribution', description: 'Native integration with Facebook Graph and YouTube Data APIs handles the direct publishing of final binaries, with bi-directional synchronization for status tracking in Airtable and instant success/error alerts in Telegram.' }
       ],
-      tools: ['n8n (Agentic Workflows)', 'OpenAI (GPT-4.1 / GPT-4o)', 'Google Veo 3.1', 'Airtable', 'Google Drive API', 'Facebook Graph API (Reels)', 'YouTube Data API']
+      tools: ['n8n (Agentic Workflows)', 'OpenAI (GPT-4.1 / GPT-4o)', 'Google Veo 3.1', 'Airtable', 'Google Drive API', 'Facebook Graph API (Reels)', 'YouTube Data API'],
+      videoUrl: 'https://www.loom.com/embed/53261be1f67b485d95d4d39ddac5e84b'
     }
   },
   {
