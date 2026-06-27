@@ -23,7 +23,7 @@ const carouselApps = [
   { name: "Plusvibe", domain: "" },
   { name: "Cloudflare", domain: "cloudflare.com" },
   { name: "Cursor", domain: "cursor.sh" },
-  { name: "Claud Clode", domain: "anthropic.com" },
+  { name: "Claude Code", domain: "anthropic.com" },
   { name: "Docker", domain: "docker.com" }
 ];
 
@@ -99,7 +99,7 @@ export default function Experience() {
               <div>
                 <h4 className="text-xs font-mono text-brand-text-muted tracking-widest uppercase mb-3">Agentic AI & Vibe Coding</h4>
                 <div className="flex flex-wrap gap-2">
-                  {['Google AI Studio', 'Antigravity'].map(skill => (
+                  {['Google AI Studio', 'Antigravity', 'Visual Studio Code', 'Coder', 'Cursor', 'Claude Code'].map(skill => (
                     <span key={skill} className="bg-brand-card border border-brand-border text-brand-text-muted px-3 py-1.5 rounded-md text-sm hover:border-brand-cyan hover:text-brand-text transition-colors cursor-default">
                       {skill}
                     </span>
