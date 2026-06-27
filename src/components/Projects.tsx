@@ -10,7 +10,7 @@ import ProjectModal from './ProjectModal';
 const projects = [
   {
     title: 'Autonomous AI Video Content Engine',
-    description: 'An autonomous content pipeline transforming raw narrative data into high-retention video assets. The system uses AI logic to generate, validate, and compile production-ready media. It orchestrates asynchronous API polling to manage rendering before autonomously publishing final reels and YouTube content directly to social platforms.',
+    description: 'An autonomous AI pipeline that transforms raw scripts into production-ready videos, manages rendering via APIs, and automatically publishes high-retention content to social media platforms.',
     image: autonomousVideoImg,
     tags: ['n8n', 'OpenAI API', 'Airtable', 'Google Drive API', 'Google Veo 3.1', 'Facebook Graph API', 'YouTube Data API', 'AI Agentic Workflows'],
     primaryTag: 'n8n',
@@ -29,12 +29,13 @@ const projects = [
         { label: 'Multi-Platform Distribution', description: 'Native integration with Facebook Graph and YouTube Data APIs handles the direct publishing of final binaries, with bi-directional synchronization for status tracking in Airtable and instant success/error alerts in Telegram.' }
       ],
       tools: ['n8n (Agentic Workflows)', 'OpenAI (GPT-4.1 / GPT-4o)', 'Google Veo 3.1', 'Airtable', 'Google Drive API', 'Facebook Graph API (Reels)', 'YouTube Data API'],
-      videoUrl: 'https://www.loom.com/embed/53261be1f67b485d95d4d39ddac5e84b'
+      videoUrl: 'https://www.loom.com/embed/53261be1f67b485d95d4d39ddac5e84b',
+      architectureLink: 'https://app.notion.com/p/AI-Video-Production-Engine-n8n-Architecture-38c1c9af8b8280f0a9d7c3a8dc9d50e3?source=copy_link'
     }
   },
   {
     title: 'AI-Powered Appointment Reminder System',
-    description: 'This automation system reads upcoming appointments from a Google Sheet, triggers AI voice calls via VAPI to remind patients of their scheduled visits, classifies each call outcome using GPT-3.5, and automatically updates appointment statuses — handling confirmations, cancellations, rescheduling, no-answers, and voicemails in real time.',
+    description: 'An intelligent voice AI system that proactively calls patients with appointment reminders, classifies their responses using GPT-3.5, and updates CRM scheduling in real-time.',
     image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop',
     tags: ['n8n', 'VAPI', 'OpenAI', 'Googlesheet', 'webhook'],
     primaryTag: 'n8n',
@@ -54,7 +55,7 @@ const projects = [
   },
   {
     title: 'AI-Powered Customer Support Email Automation with Daily Digest',
-    description: 'This automation system reads incoming customer support emails, uses AI to categorize and draft responses, routes tickets to the right team, sends automated replies, and compiles a daily digest summary delivered to your inbox and team channel.',
+    description: 'An end-to-end email support automation that categorizes incoming tickets, drafts context-aware AI responses, routes them to the correct department, and compiles daily performance digests.',
     image: customerSupportImg,
     tags: ['YouTube', 'Airtable', 'Google Sheets', 'n8n'],
     primaryTag: 'n8n',
@@ -74,7 +75,7 @@ const projects = [
   },
   {
     title: 'Plumbing Service CRM Automation',
-    description: 'Fully automated CRM system managing the entire customer lifecycle — from form submission and estimate follow-ups to job booking, appointment reminders, and automated Google review requests via multi-channel communication.',
+    description: 'A fully automated CRM system managing the entire customer lifecycle, from initial form submissions and estimate follow-ups to job bookings and automated review requests.',
     image: highLevelImg,
     tags: ['GoHighLevel', 'CRM', 'SMS', 'Email', 'Workflows'],
     primaryTag: 'GoHighLevel',
@@ -96,7 +97,7 @@ const projects = [
   },
   {
     title: 'Smart Lead Capture & CRM Automation System',
-    description: 'This automation system captures booking inquiries from a website form, validates the information, checks for existing records, updates CRM entries, and sends confirmations and notifications automatically.',
+    description: 'A comprehensive lead capture system that instantly validates inquiries from forms, manages existing CRM records, and automatically routes team notifications and client confirmations.',
     image: smartLeadCaptureImg,
     tags: ['Airtable', 'Google Sheets', 'Gmail', 'Slack', 'Webhook', 'Make.com'],
     primaryTag: 'Make.com',
@@ -117,7 +118,7 @@ const projects = [
   },
   {
     title: 'Automated HR Sentiment & Safety Monitoring',
-    description: 'This automation system monitors field reports submitted by site captains, uses AI to classify each entry by category, sentiment, and urgency, then automatically escalates HR issues via email and updates the CRM sheet — ensuring no critical safety or personnel concern goes unnoticed.',
+    description: 'An AI-driven HR monitoring system that analyzes daily field reports for sentiment and urgency, ensuring swift and automated escalation of critical personnel and safety issues.',
     image: hrSentimentImg,
     tags: ['Google Sheets', 'OpenAI', 'Gmail', 'JSON Parser', 'Make.com'],
     primaryTag: 'Make.com',

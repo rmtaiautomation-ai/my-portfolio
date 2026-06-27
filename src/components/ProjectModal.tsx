@@ -63,28 +63,32 @@ export default function ProjectModal({ project, onClose }: ProjectModalProps) {
                 </div>
 
                 {/* Solution & Impact */}
-                <div className="bg-brand-dark p-6 rounded-xl border border-brand-border">
-                  <h3 className="text-lg font-bold text-brand-cyan mb-2">The Solution & Impact</h3>
-                  <p className="leading-relaxed text-brand-text-muted">{project.details.solution}</p>
+                <div className="flex flex-col gap-4">
+                  {project.details.architectureLink && (
+                    <div className="flex justify-center">
+                      <a 
+                        href={project.details.architectureLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-xs font-bold text-brand-cyan hover:text-brand-text transition-colors border border-brand-cyan hover:border-brand-text px-4 py-2 rounded-lg flex items-center gap-1 w-fit uppercase tracking-wider"
+                      >
+                        View Documentation &rarr;
+                      </a>
+                    </div>
+                  )}
+                  <div className="bg-brand-dark p-6 rounded-xl border border-brand-border h-full">
+                    <h3 className="text-lg font-bold text-brand-cyan mb-2">The Solution & Impact</h3>
+                    <p className="leading-relaxed text-brand-text-muted">{project.details.solution}</p>
+                  </div>
                 </div>
               </div>
 
               {/* Architecture */}
               <div>
-                <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-2">
+                <div className="mb-4">
                   <h3 className="text-xl font-bold text-brand-text flex items-center gap-2">
                     Technical Architecture (Data Flow)
                   </h3>
-                  {project.details.architectureLink && (
-                    <a 
-                      href={project.details.architectureLink} 
-                      target="_blank" 
-                      rel="noopener noreferrer"
-                      className="text-xs font-bold text-brand-cyan hover:text-brand-text transition-colors border border-brand-cyan hover:border-brand-text px-3 py-1.5 rounded-lg flex items-center gap-1 w-fit"
-                    >
-                      View Documentation &rarr;
-                    </a>
-                  )}
                 </div>
                 <div className="grid grid-cols-1 gap-4">
                   {project.details.architecture.map((step: any, idx: number) => (
