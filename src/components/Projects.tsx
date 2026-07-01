@@ -9,6 +9,27 @@ import ProjectModal from './ProjectModal';
 
 const projects = [
   {
+    title: 'PrimeCuts | Premium E-Commerce Business Engine',
+    description: 'A high-performance, highly secure, and automated digital storefront built specifically for premium meat suppliers.',
+    image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop',
+    tags: ['Next.js', 'React', 'Supabase', 'Tailwind CSS', 'Vercel'],
+    primaryTag: 'Next.js',
+    details: {
+      executiveSummary: 'A high-performance, highly secure, and automated digital storefront built specifically for premium meat suppliers. It is a full Business Management Engine designed to automate operations, protect revenue, and deliver a VIP customer experience.',
+      challenge: 'Most boutique food suppliers rely on manual, error-prone processes: taking orders through Instagram DMs, tracking inventory in Excel, and manually messaging customers for delivery updates.',
+      solution: 'I built PrimeCuts as a Business Management Engine to automate operations, securely handle data, manage inventory live, and streamline the customer ordering process.',
+      architecture: [
+        { label: 'Intelligent Inventory', description: 'Live stock tracking prevents overselling. Auto-restocking algorithms adjust inventory upon order cancellation. Low-stock email alerts notify administrators.' },
+        { label: 'Enterprise Security', description: 'Data is locked down at the row level via Supabase RLS. Robust authentication using Supabase Auth handles magic links and OAuth.' },
+        { label: 'Anti-Spam Checkout', description: 'Checkout rate limiting protects against bots, and aggressive data sanitization prevents injection attacks.' },
+        { label: 'Secure Admin Portal', description: 'Role-Based Access Control (RBAC) restricted dashboard for financial and order management.' },
+        { label: 'Automated Customer Experience', description: 'Generates highly professional, readable order numbers and provides seamless order tracking.' }
+      ],
+      tools: ['Next.js', 'Supabase', 'React', 'Tailwind CSS', 'Vercel'],
+      architectureLink: 'https://github.com/rmtaiautomation-ai/prime-cuts-store'
+    }
+  },
+  {
     title: 'Autonomous AI Video Content Engine',
     description: 'An autonomous AI pipeline that transforms raw scripts into production-ready videos, manages rendering via APIs, and automatically publishes high-retention content to social media platforms.',
     image: autonomousVideoImg,
@@ -179,7 +200,7 @@ const projects = [
   }
 ];
 
-const filters = ['All', 'Make.com', 'n8n', 'GoHighLevel'];
+const filters = ['All', 'Make.com', 'n8n', 'GoHighLevel', 'Next.js'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
