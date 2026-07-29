@@ -77,11 +77,11 @@ export default function Hero() {
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-semibold text-brand-text mt-2">
-          Automation and Lead Generation Specialist
+          AI Automation & AI Full-Stack Specialist
         </h2>
         
         <p className="text-brand-text-muted max-w-2xl text-lg leading-relaxed mt-4">
-          I build end-to-end automation systems and AI workflows that streamline operations, eliminate repetitive tasks, and help businesses scale efficiently.
+          I build end-to-end automation systems, AI-powered web applications, and intelligent workflows that streamline operations and help businesses scale efficiently.
         </p>
 
         {/* Contact Details Row */}

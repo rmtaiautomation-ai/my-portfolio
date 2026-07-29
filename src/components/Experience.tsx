@@ -24,7 +24,13 @@ const carouselApps = [
   { name: "Cloudflare", domain: "cloudflare.com" },
   { name: "Cursor", domain: "cursor.sh" },
   { name: "Claude Code", domain: "anthropic.com" },
-  { name: "Docker", domain: "docker.com" }
+  { name: "Docker", domain: "docker.com" },
+  { name: "React", domain: "react.dev" },
+  { name: "Next.js", domain: "nextjs.org" },
+  { name: "Supabase", domain: "supabase.com" },
+  { name: "Tailwind CSS", domain: "tailwindcss.com" },
+  { name: "Stripe", domain: "stripe.com" },
+  { name: "Resend", domain: "resend.com" }
 ];
 
 export default function Experience() {
@@ -133,6 +139,17 @@ export default function Experience() {
                 <h4 className="text-xs font-mono text-brand-text-muted tracking-widest uppercase mb-3">Communication</h4>
                 <div className="flex flex-wrap gap-2">
                   {['Slack', 'Discord', 'Telegram', 'WhatsApp'].map(skill => (
+                    <span key={skill} className="bg-brand-card border border-brand-border text-brand-text-muted px-3 py-1.5 rounded-md text-sm hover:border-brand-cyan hover:text-brand-text transition-colors cursor-default">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <h4 className="text-xs font-mono text-brand-text-muted tracking-widest uppercase mb-3">Full-Stack Development</h4>
+                <div className="flex flex-wrap gap-2">
+                  {['React', 'Next.js', 'Supabase', 'Tailwind CSS', 'Stripe', 'Resend'].map(skill => (
                     <span key={skill} className="bg-brand-card border border-brand-border text-brand-text-muted px-3 py-1.5 rounded-md text-sm hover:border-brand-cyan hover:text-brand-text transition-colors cursor-default">
                       {skill}
                     </span>

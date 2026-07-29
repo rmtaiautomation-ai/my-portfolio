@@ -25,10 +25,10 @@ export default function About() {
           {/* Right Side: Text and Button */}
           <div className="w-full md:w-3/5 flex flex-col items-center md:items-start text-center md:text-left pt-8">
             <p className="text-brand-text-muted text-lg leading-relaxed mb-6">
-              Hello! I'm an Automation & Lead Generation Specialist focused on architecting intelligent workflows that eliminate manual bottlenecks. Leveraging platforms like Make.com, n8n, and GoHighLevel, I transform complex, multi-step processes into seamless, scalable systems.
+              Hello! I'm an AI Automation & AI Full-Stack Specialist focused on architecting intelligent workflows and high-performing web applications. Leveraging modern technologies like React, Next.js, and Supabase alongside platforms like Make.com and n8n, I transform complex, multi-step processes into seamless, scalable systems.
             </p>
             <p className="text-brand-text-muted text-lg leading-relaxed mb-10">
-              I specialize in integrating Agentic AI and API structures to build robust outbound pipelines, from data enrichment to video prospecting. My goal is simple: engineer the automated engines that run quietly in the background so businesses can focus on growth.
+              I specialize in integrating Agentic AI and robust API structures to build automated pipelines and premium web experiences. My goal is simple: engineer the automated engines and digital platforms that run quietly in the background so businesses can focus on exponential growth.
             </p>
             
             <button 

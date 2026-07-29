@@ -4,7 +4,7 @@ import { Workflow, Bot, Settings, Zap, Database, Globe } from 'lucide-react';
 const services = [
   {
     title: 'Workflow Automation',
-    description: 'End-to-end automation workflows using Zapier, Make.com, and n8n that eliminate repetitive tasks.',
+    description: 'End-to-end automation workflows using n8n and Make.com that eliminate repetitive tasks.',
     icon: <Workflow className="text-brand-cyan" size={24} />,
   },
   {
@@ -28,8 +28,8 @@ const services = [
     icon: <Database className="text-brand-cyan" size={24} />,
   },
   {
-    title: 'Funnel & Website Builder',
-    description: 'Websites & Funnels That Turn Visitors into Clients (landing pages, sales funnels, forms, calendars, membership sites)',
+    title: 'AI Full-Stack Development',
+    description: 'Building lightning-fast, scalable, and AI-integrated web applications using modern frameworks like Next.js, React, and Supabase.',
     icon: <Globe className="text-brand-cyan" size={24} />,
   },
 ];

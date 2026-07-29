@@ -9,11 +9,36 @@ import ProjectModal from './ProjectModal';
 
 const projects = [
   {
+    title: 'AI B2B Sales Training Simulator | Conversational Roleplay Engine',
+    description: 'An adaptive conversational B2B sales roleplay and evaluation platform powered by Google Gemini that dynamically challenges sales representatives and delivers objective performance report cards.',
+    image: 'https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=600&auto=format&fit=crop',
+    tags: ['Google Gemini', 'React 19', 'Node.js', 'Express', 'TypeScript', 'Tailwind CSS v4', 'SSE Streaming'],
+    primaryTag: 'Google Gemini',
+    liveUrl: 'https://sales-simulator-6q8c.onrender.com/',
+    githubUrl: 'https://github.com/rmtaiautomation-ai/sales_simulator',
+    details: {
+      executiveSummary: 'An interactive web application designed to train, test, and evaluate sales representatives in realistic cold and warm calling environments. The system utilizes Google Gemini instructed as a Skeptical Business Owner to listen to sales pitches, dynamically adjust resistance based on argument quality, and deliver a rigorous, unbiased performance evaluation ("Report Card") at the end of the call.',
+      challenge: 'Traditional sales training relies on scripted chatbots or peer roleplays that lack real-time adaptability, objective grading, and natural voice/call cadence, leaving sales representatives unprepared for skeptical, high-value B2B prospects.',
+      solution: 'I engineered a full-stack real-time conversational simulation engine using React 19, Node.js/Express, and Google Gemini. It features an adaptive difficulty engine (Level 2 to 5), state-switching persona triggers, Server-Sent Events (SSE) for low-latency streaming, and automated objective report cards with hire/no-hire verdicts.',
+      architecture: [
+        { label: 'State-Switching & Persona Trigger Engine', description: 'Inspects the salesperson\'s opening lines for case-insensitive keywords to dynamically inject contextual tags into Gemini, forcing persona shifts (e.g., Solar vs. HVAC/Roofing) across randomized psychological archetypes.' },
+        { label: 'Adaptive Difficulty Engine (Level 2 to 5)', description: 'Dynamically elevates skepticism mid-call from baseline to elite technical pushback when pain points are validated effectively, while deploying a barge-in defense if scripts sound rehearsed.' },
+        { label: 'Server-Sent Events (SSE) Streaming Layer', description: 'Streams token-by-token LLM output via HTTP/1.1 Chunked Transfer Encoding (text/event-stream) from Express to React, eliminating WebSocket overhead while powering real-time audio visualizers.' },
+        { label: 'Automated Graded Assessment Report Card', description: 'Detects call termination to drop character and emit a structured markdown evaluation featuring an A-F letter grade, [HIRE / DO NOT HIRE] screening verdict, and actionable coaching analysis.' },
+        { label: 'Unified Monolithic Deployment', description: 'Vite compiles the React SPA while ESBuild bundles server.ts into server.cjs, served via Express on Render.com for zero CORS friction and simplified single-domain SSL hosting.' }
+      ],
+      tools: ['Google Gemini (2.5/3.5 Flash)', 'React 19', 'Node.js / Express', 'TypeScript', 'Server-Sent Events (SSE)', 'Tailwind CSS 4 + Motion', 'Web Audio API'],
+      architectureLink: 'https://github.com/rmtaiautomation-ai/sales_simulator'
+    }
+  },
+  {
     title: 'PrimeCuts | Premium E-Commerce Business Engine',
     description: 'A high-performance, highly secure, and automated digital storefront built specifically for premium meat suppliers.',
     image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop',
     tags: ['Next.js', 'React', 'Supabase', 'Tailwind CSS', 'Vercel'],
     primaryTag: 'Next.js',
+    liveUrl: 'https://prime-cuts-store.vercel.app/',
+    githubUrl: 'https://github.com/rmtaiautomation-ai/prime-cuts-store',
     details: {
       executiveSummary: 'A high-performance, highly secure, and automated digital storefront built specifically for premium meat suppliers. It is a full Business Management Engine designed to automate operations, protect revenue, and deliver a VIP customer experience.',
       challenge: 'Most boutique food suppliers rely on manual, error-prone processes: taking orders through Instagram DMs, tracking inventory in Excel, and manually messaging customers for delivery updates.',
@@ -200,7 +225,7 @@ const projects = [
   }
 ];
 
-const filters = ['All', 'Make.com', 'n8n', 'GoHighLevel', 'Next.js'];
+const filters = ['All', 'Google Gemini', 'Make.com', 'n8n', 'GoHighLevel', 'Next.js'];
 
 export default function Projects() {
   const [activeFilter, setActiveFilter] = useState('All');
