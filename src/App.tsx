@@ -1,42 +1,30 @@
-import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Services from './components/Services';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Calendar from './components/Calendar';
+import Contact from './components/Contact';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(true);
-
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode);
-  };
-
-  useEffect(() => {
-    if (isDarkMode) {
-      document.documentElement.classList.add('dark');
-    } else {
-      document.documentElement.classList.remove('dark');
-    }
-  }, [isDarkMode]);
-
   return (
-    <div className="min-h-screen selection:bg-brand-cyan selection:text-white transition-colors duration-300">
-      <Navbar isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+    <div className="min-h-screen selection:bg-brand-blue selection:text-white">
+      <Navbar />
       <main>
         <Hero />
         <About />
         <Services />
         <Experience />
         <Projects />
-        <Calendar />
+        <Contact />
       </main>
-      
+
       {/* Footer */}
-      <footer className="border-t border-brand-border/50 py-8 px-6 text-center text-sm text-slate-500 bg-brand-dark">
-        <p>© {new Date().getFullYear()} RMT. All rights reserved.</p>
+      <footer className="border-t border-brand-border/50 py-8 px-6 bg-brand-dark">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm text-brand-text-muted">
+          <p>© {new Date().getFullYear()} Rommel Tima. All rights reserved.</p>
+          <p>Built with React · TypeScript · Tailwind CSS</p>
+        </div>
       </footer>
     </div>
   );

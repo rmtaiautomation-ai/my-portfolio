@@ -1,14 +1,16 @@
 @import "tailwindcss";
 
 @theme {
-  --color-brand-cyan: #3b82f6;
-  --color-brand-blue: #3b82f6;
+  --color-brand-cyan: #e11d2a;
+  --color-brand-blue: #e11d2a;
   --color-brand-dark: var(--bg-primary);
   --color-brand-card: var(--bg-card);
   --color-brand-border: var(--border-color);
   --color-brand-text: var(--text-primary);
   --color-brand-text-muted: var(--text-muted);
-  
+
+  --font-display: "Anton", system-ui, "Segoe UI", sans-serif;
+
   --animate-marquee: marquee 40s linear infinite;
   
   @keyframes marquee {
@@ -26,11 +28,11 @@
 }
 
 .dark {
-  --bg-primary: #070b14;
-  --bg-card: #0f1629;
-  --border-color: #1e293b;
+  --bg-primary: #0a0606;
+  --bg-card: #150c0c;
+  --border-color: #2c1616;
   --text-primary: #ffffff;
-  --text-muted: #94a3b8;
+  --text-muted: #a89a9a;
 }
 
 body {
@@ -44,13 +46,22 @@ body {
 
 /* Custom glow utility for buttons and cards */
 .neon-glow {
-  box-shadow: 0 0 20px 2px rgba(59, 130, 246, 0.15);
+  box-shadow: 0 0 24px 2px rgba(225, 29, 42, 0.18);
 }
 
 .text-gradient {
-  background: linear-gradient(90deg, #3b82f6 0%, #3b82f6 100%);
+  background: linear-gradient(90deg, #e11d2a 0%, #ff5a63 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* Top-down white fade for oversized display headings */
+.heading-fade {
+  background: linear-gradient(180deg, #ffffff 30%, rgba(255, 255, 255, 0.35) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* Scrollbar styling */

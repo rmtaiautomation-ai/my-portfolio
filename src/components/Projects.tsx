@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Target, ArrowRight } from 'lucide-react';
 
 import smartLeadCaptureImg from '../assets/make111.jpg';
 import hrSentimentImg from '../assets/hr-sentiment.png';
@@ -10,6 +11,9 @@ import ProjectModal from './ProjectModal';
 const projects = [
   {
     title: 'AI B2B Sales Training Simulator | Conversational Roleplay Engine',
+    role: 'Full-Stack AI Engineer',
+    impact: 'Adaptive AI difficulty engine with objective A–F hire / no-hire report cards',
+    language: { name: 'TypeScript', color: '#3178c6' },
     description: 'An adaptive conversational B2B sales roleplay and evaluation platform powered by Google Gemini that dynamically challenges sales representatives and delivers objective performance report cards.',
     image: 'https://images.unsplash.com/photo-1552581234-26160f608093?q=80&w=600&auto=format&fit=crop',
     tags: ['Google Gemini', 'React 19', 'Node.js', 'Express', 'TypeScript', 'Tailwind CSS v4', 'SSE Streaming'],
@@ -33,6 +37,9 @@ const projects = [
   },
   {
     title: 'PrimeCuts | Premium E-Commerce Business Engine',
+    role: 'Full-Stack Developer',
+    impact: 'Automated inventory, row-level security, and anti-bot checkout for a boutique supplier',
+    language: { name: 'TypeScript', color: '#3178c6' },
     description: 'A high-performance, highly secure, and automated digital storefront built specifically for premium meat suppliers.',
     image: 'https://images.unsplash.com/photo-1544025162-d76694265947?q=80&w=600&auto=format&fit=crop',
     tags: ['Next.js', 'React', 'Supabase', 'Tailwind CSS', 'Vercel'],
@@ -56,6 +63,9 @@ const projects = [
   },
   {
     title: 'Autonomous AI Video Content Engine',
+    role: 'AI Automation Architect',
+    impact: 'Cut the video production lifecycle from days to minutes with 100% brand compliance',
+    language: { name: 'n8n', color: '#EA4B71' },
     description: 'An autonomous AI pipeline that transforms raw scripts into production-ready videos, manages rendering via APIs, and automatically publishes high-retention content to social media platforms.',
     image: autonomousVideoImg,
     tags: ['n8n', 'OpenAI API', 'Airtable', 'Google Drive API', 'Google Veo 3.1', 'Facebook Graph API', 'YouTube Data API', 'AI Agentic Workflows'],
@@ -81,6 +91,9 @@ const projects = [
   },
   {
     title: 'AI-Powered Appointment Reminder System',
+    role: 'Voice AI Automation Engineer',
+    impact: 'Autonomous outbound reminder calls with real-time CRM status updates',
+    language: { name: 'n8n', color: '#EA4B71' },
     description: 'An intelligent voice AI system that proactively calls patients with appointment reminders, classifies their responses using GPT-3.5, and updates CRM scheduling in real-time.',
     image: 'https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=600&auto=format&fit=crop',
     tags: ['n8n', 'VAPI', 'OpenAI', 'Googlesheet', 'webhook'],
@@ -101,6 +114,9 @@ const projects = [
   },
   {
     title: 'AI-Powered Customer Support Email Automation with Daily Digest',
+    role: 'AI Automation Engineer',
+    impact: 'First-line AI agent that triages, drafts, routes, and reports on every support ticket',
+    language: { name: 'n8n', color: '#EA4B71' },
     description: 'An end-to-end email support automation that categorizes incoming tickets, drafts context-aware AI responses, routes them to the correct department, and compiles daily performance digests.',
     image: customerSupportImg,
     tags: ['YouTube', 'Airtable', 'Google Sheets', 'n8n'],
@@ -121,6 +137,9 @@ const projects = [
   },
   {
     title: 'Plumbing Service CRM Automation',
+    role: 'CRM Automation Specialist',
+    impact: 'Multi-channel follow-ups that recover open estimates and auto-capture Google reviews',
+    language: { name: 'GoHighLevel', color: '#188BF6' },
     description: 'A fully automated CRM system managing the entire customer lifecycle, from initial form submissions and estimate follow-ups to job bookings and automated review requests.',
     image: highLevelImg,
     tags: ['GoHighLevel', 'CRM', 'SMS', 'Email', 'Workflows'],
@@ -143,6 +162,9 @@ const projects = [
   },
   {
     title: 'Smart Lead Capture & CRM Automation System',
+    role: 'Automation Engineer',
+    impact: 'Real-time lead validation and instant Slack routing — zero manual sorting',
+    language: { name: 'Make.com', color: '#6D00CC' },
     description: 'A comprehensive lead capture system that instantly validates inquiries from forms, manages existing CRM records, and automatically routes team notifications and client confirmations.',
     image: smartLeadCaptureImg,
     tags: ['Airtable', 'Google Sheets', 'Gmail', 'Slack', 'Webhook', 'Make.com'],
@@ -164,6 +186,9 @@ const projects = [
   },
   {
     title: 'Automated HR Sentiment & Safety Monitoring',
+    role: 'AI Automation Engineer',
+    impact: 'Zero critical safety concerns missed across hundreds of daily field reports',
+    language: { name: 'Make.com', color: '#6D00CC' },
     description: 'An AI-driven HR monitoring system that analyzes daily field reports for sentiment and urgency, ensuring swift and automated escalation of critical personnel and safety issues.',
     image: hrSentimentImg,
     tags: ['Google Sheets', 'OpenAI', 'Gmail', 'JSON Parser', 'Make.com'],
@@ -184,6 +209,9 @@ const projects = [
   },
   {
     title: 'Automated Lead Validation & CRM Sync Engine',
+    role: 'Automation Engineer',
+    impact: 'Regex-validated lead ingestion that keeps the CRM clean and the team aligned',
+    language: { name: 'Make.com', color: '#6D00CC' },
     description: 'An automation workflow that sanitizes inbound leads via real-time syntax validation. Valid leads are instantly synced to the CRM, while rejected entries are logged. Includes automated Slack notifications for team alignment.',
     image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop',
     tags: ['Make.com', 'Typeform', 'Airtable', 'Google Sheets', 'Slack API', 'Regex'],
@@ -205,6 +233,9 @@ const projects = [
   },
   {
     title: 'AI-Powered Dental Clinic Website',
+    role: 'Full-Stack Developer',
+    impact: 'Turned a static brochure site into an active lead-gen and patient-management tool',
+    language: { name: 'JavaScript', color: '#f1e05a' },
     description: 'Modern responsive dental clinic website built with TailwindCSS and JavaScript, integrated with AI-powered booking automation and smart CRM workflows.',
     image: 'https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=600&auto=format&fit=crop',
     tags: ['HTML', 'TailwindCSS', 'JavaScript', 'AI Integration', 'Make.com', 'Airtable'],
@@ -225,115 +256,126 @@ const projects = [
   }
 ];
 
-const filters = ['All', 'Google Gemini', 'Make.com', 'n8n', 'GoHighLevel', 'Next.js'];
+type Project = (typeof projects)[number];
+
+const GRID_INITIAL = 4;
+
+function CardBody({ project, onOpen }: { project: Project; onOpen: () => void }) {
+  return (
+    <div className="p-6 lg:p-7 flex flex-col flex-grow">
+      <h3 className="text-lg lg:text-xl font-bold text-brand-text leading-snug">{project.title}</h3>
+      <p className="text-brand-blue text-sm font-semibold mt-1">{project.role}</p>
+
+      <p className="text-brand-text-muted text-sm leading-relaxed mt-4 line-clamp-3">
+        {project.description}
+      </p>
+
+      <p className="flex items-start gap-2 text-brand-blue text-sm font-medium mt-4">
+        <Target size={15} className="mt-0.5 shrink-0" />
+        <span><span className="font-semibold">Impact:</span> {project.impact}</span>
+      </p>
+
+      <div className="flex flex-wrap gap-2 mt-5">
+        {project.tags.slice(0, 6).map((tag) => (
+          <span key={tag} className="bg-brand-dark border border-brand-border text-brand-text-muted text-xs px-2.5 py-1 rounded">
+            {tag}
+          </span>
+        ))}
+      </div>
+
+      <div className="flex items-center justify-between mt-auto pt-6 border-t border-brand-border/60">
+        <span className="flex items-center gap-2 text-xs text-brand-text-muted">
+          <span className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: project.language.color }} />
+          {project.language.name}
+        </span>
+        <button
+          onClick={onOpen}
+          className="group flex items-center gap-1.5 text-brand-blue text-sm font-semibold hover:gap-2.5 transition-all"
+        >
+          View Details
+          <ArrowRight size={15} className="group-hover:translate-x-0.5 transition-transform" />
+        </button>
+      </div>
+    </div>
+  );
+}
 
 export default function Projects() {
-  const [activeFilter, setActiveFilter] = useState('All');
-  const [selectedProject, setSelectedProject] = useState<any>(null);
-  const [visibleCount, setVisibleCount] = useState(6);
+  const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [expanded, setExpanded] = useState(false);
 
-  const filteredProjects = activeFilter === 'All' 
-    ? projects 
-    : projects.filter(p => p.primaryTag === activeFilter);
+  const flagship = projects[0];
+  const rest = projects.slice(1);
+  const visibleRest = expanded ? rest : rest.slice(0, GRID_INITIAL);
 
   return (
-    <section id="projects" className={`py-24 px-6 relative ${selectedProject ? 'z-50' : 'z-10'}`}>
+    <section id="projects" className={`py-24 px-6 relative border-t border-brand-border/50 ${selectedProject ? 'z-50' : 'z-10'}`}>
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12">
-          <p className="text-brand-cyan font-mono text-sm tracking-widest uppercase mb-2">Portfolio</p>
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-brand-text">Project Highlights</h2>
-          <p className="text-brand-text-muted max-w-2xl mx-auto">
-            A selection of automation projects that have helped businesses save time and scale operations.
-          </p>
+        {/* Header */}
+        <p className="text-brand-blue text-xs sm:text-sm font-bold tracking-[0.25em] uppercase flex items-center gap-3 mb-6">
+          <span className="w-10 h-px bg-brand-blue"></span>
+          Projects
+        </p>
+        <h2 className="font-display text-4xl md:text-6xl uppercase text-brand-text leading-none mb-4">
+          Flagship Showcase
+        </h2>
+        <p className="text-brand-text-muted max-w-2xl mb-14">
+          From AI automation pipelines to full-stack platforms — projects that solve real-world problems.
+        </p>
+
+        {/* Flagship project - full width */}
+        <div className="bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-blue/50 transition-colors flex flex-col lg:flex-row lg:max-h-[460px] mb-8">
+          <div className="relative lg:w-[52%] shrink-0 aspect-[16/10] lg:aspect-auto lg:h-full overflow-hidden border-b lg:border-b-0 lg:border-r border-brand-border/50">
+            <img src={flagship.image} alt={flagship.title} className="w-full h-full object-cover" />
+            <span className="absolute top-4 left-0 bg-brand-blue text-white text-[0.7rem] font-bold tracking-widest uppercase px-4 py-1.5">
+              Flagship Project
+            </span>
+          </div>
+          <div className="flex flex-col lg:w-[48%] lg:justify-center">
+            <CardBody project={flagship} onOpen={() => setSelectedProject(flagship)} />
+          </div>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-3 mb-12">
-          {filters.map(filter => (
-            <button
-              key={filter}
-              onClick={() => {
-                setActiveFilter(filter);
-                setVisibleCount(6);
-              }}
-              className={`px-5 py-2 rounded-full text-sm font-medium transition-colors ${
-                activeFilter === filter 
-                  ? 'bg-brand-cyan text-white' 
-                  : 'bg-brand-card border border-brand-border text-brand-text-muted hover:border-brand-cyan hover:text-brand-text'
-              }`}
+        {/* Grid - 2 columns */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {visibleRest.map((project) => (
+            <div
+              key={project.title}
+              className="bg-brand-card border border-brand-border rounded-2xl overflow-hidden hover:border-brand-blue/50 transition-colors flex flex-col"
             >
-              {filter}
-            </button>
-          ))}
-        </div>
-
-        {/* Project Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-          {filteredProjects.slice(0, visibleCount).map((project, index) => (
-            <div key={index} className="bg-brand-card border border-brand-border rounded-xl overflow-hidden group hover:border-brand-cyan/50 transition-colors flex flex-col h-full">
-              {/* Image Container */}
-              <div className="w-full aspect-[4/3] relative overflow-hidden bg-brand-dark/80 flex items-center justify-center border-b border-brand-border/50">
-                <img 
-                  src={project.image} 
-                  alt={project.title} 
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              <div className="aspect-[16/10] overflow-hidden border-b border-brand-border/50">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute top-4 right-4 bg-brand-cyan text-brand-dark text-xs font-bold px-3 py-1 rounded-full">
-                  {project.primaryTag}
-                </div>
               </div>
-
-              {/* Content */}
-              <div className="p-6 flex-grow flex flex-col">
-                <div className="flex items-center gap-2 mb-3">
-                  <h3 className="text-xl font-bold text-brand-text">{project.title}</h3>
-                </div>
-                
-                <p className="text-brand-text-muted text-sm leading-relaxed mb-6 flex-grow">
-                  {project.description}
-                </p>
-
-                {/* Tags */}
-                <div className="flex flex-wrap gap-2 mt-auto mb-6">
-                  {project.tags.map(tag => (
-                    <span key={tag} className="bg-brand-dark border border-brand-border text-brand-text-muted text-xs px-2.5 py-1 rounded">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-
-                {/* View Details Button */}
-                {(project as any).details && (
-                  <button 
-                    onClick={() => setSelectedProject(project)}
-                    className="w-full mt-auto py-3 border border-brand-border rounded-lg text-sm font-bold text-brand-text hover:bg-brand-cyan hover:text-brand-dark hover:border-brand-cyan transition-all uppercase tracking-wider"
-                  >
-                    View Details &rarr;
-                  </button>
-                )}
-              </div>
+              <CardBody project={project} onOpen={() => setSelectedProject(project)} />
             </div>
           ))}
         </div>
 
-        {/* Show More Button */}
-        {visibleCount < filteredProjects.length && (
-          <div className="mt-16 flex justify-center">
+        {/* View all */}
+        {rest.length > GRID_INITIAL && (
+          <div className="mt-12">
             <button
-              onClick={() => setVisibleCount(prev => prev + 6)}
-              className="bg-transparent border border-brand-cyan text-brand-cyan hover:bg-brand-cyan hover:text-brand-dark px-10 py-3 rounded text-sm font-bold tracking-widest transition-colors uppercase"
+              onClick={() => {
+                if (expanded) {
+                  document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
+                }
+                setExpanded((v) => !v);
+              }}
+              className="w-full py-4 border border-brand-border rounded-xl text-sm font-bold tracking-widest uppercase text-brand-text-muted hover:text-brand-text hover:border-brand-blue transition-colors"
             >
-              Show More
+              {expanded ? 'Show Less' : `View All ${projects.length} Projects`}
             </button>
           </div>
         )}
-        
       </div>
 
-      <ProjectModal 
-        project={selectedProject} 
-        onClose={() => setSelectedProject(null)} 
-      />
+      <ProjectModal project={selectedProject} onClose={() => setSelectedProject(null)} />
     </section>
   );
 }
