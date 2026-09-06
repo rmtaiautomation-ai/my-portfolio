@@ -4,8 +4,8 @@ import { Menu, X } from 'lucide-react';
 const LINKS = [
   { id: 'home', label: 'Home' },
   { id: 'about', label: 'About' },
-  { id: 'services', label: 'Services' },
   { id: 'experience', label: 'Experience' },
+  { id: 'services', label: 'Services' },
   { id: 'projects', label: 'Projects' },
   { id: 'contact', label: 'Contact' },
 ];
@@ -85,7 +85,7 @@ export default function Navbar() {
         <div className="flex items-center gap-3">
           <button
             onClick={() => go('contact')}
-            className="hidden sm:inline-flex bg-brand-blue hover:bg-[#c0121f] text-white font-bold text-xs tracking-widest uppercase px-5 py-2.5 rounded-md transition-colors"
+            className="hidden sm:inline-flex bg-brand-blue hover:bg-[#c0121f] text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg shadow-lg shadow-brand-blue/30 transition-colors"
           >
             Resume
           </button>
@@ -115,7 +115,7 @@ export default function Navbar() {
           ))}
           <button
             onClick={() => go('contact')}
-            className="mt-2 bg-brand-blue text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-md"
+            className="mt-2 bg-brand-blue text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg"
           >
             Resume
           </button>

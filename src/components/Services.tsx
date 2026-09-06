@@ -1,4 +1,4 @@
-import { Workflow, Bot, Network, Zap, GitBranch, Globe } from 'lucide-react';
+import { Workflow, Bot, Brain, Network, Zap, GitBranch, Globe } from 'lucide-react';
 
 const services = [
   {
@@ -14,6 +14,13 @@ const services = [
     description:
       'Chatbots, lead enrichment, content generation, and document processing wired into the tools you already use.',
     icon: Bot,
+  },
+  {
+    title: 'LLM Engineering & Agentic Systems',
+    hook: 'Build the brain',
+    description:
+      'Multi-agent pipelines, structured outputs, function-calling tools, and voice/live model integration — the reasoning layer behind a production AI product, not a chatbot wrapper.',
+    icon: Brain,
   },
   {
     title: 'System Architecture & Design',
@@ -63,12 +70,13 @@ export default function Services() {
 
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {services.map((service) => {
+          {services.map((service, i) => {
             const Icon = service.icon;
+            const isOrphan = i === services.length - 1 && services.length % 3 === 1;
             return (
               <div
                 key={service.title}
-                className="bg-brand-card border border-brand-border rounded-2xl p-7 hover:border-brand-blue/50 transition-colors group"
+                className={`bg-brand-card border border-brand-border rounded-2xl p-7 hover:border-brand-blue/50 transition-colors group ${isOrphan ? 'lg:col-start-2' : ''}`}
               >
                 <div className="w-11 h-11 rounded-lg bg-brand-blue/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                   <Icon className="text-brand-blue" size={22} />

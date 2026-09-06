@@ -6,9 +6,66 @@ import hrSentimentImg from '../assets/hr-sentiment.png';
 import highLevelImg from '../assets/high11.jpg';
 import customerSupportImg from '../assets/n8n111.jpg';
 import autonomousVideoImg from '../assets/autonomous-video-engine.jpg';
+import assemblyReelImg from '../assets/assemblyreel.png';
 import ProjectModal from './ProjectModal';
 
 const projects = [
+  {
+    title: 'AssemblyReel | Multi-Agent Long-Form Video Production Engine',
+    role: 'Full-Stack AI Engineer',
+    impact: 'Act-by-act narration approval before any visual generation or render',
+    language: { name: 'TypeScript', color: '#3178c6' },
+    description: 'A local-first video production engine that writes act-by-act narrated scripts with OpenAI GPT-4o mini, times them against Deepgram forced alignment, and renders them as Remotion compositions locally or on AWS Lambda.',
+    image: assemblyReelImg,
+    tags: ['Remotion', 'OpenAI GPT-4o mini', 'Next.js 16', 'Deepgram nova-2', 'AWS Lambda', 'Supabase', 'TypeScript', 'Fal.ai'],
+    primaryTag: 'Remotion',
+    githubUrl: 'https://github.com/rmtaiautomation-ai/Assemblyreel.io',
+    details: {
+      executiveSummary: 'AssemblyReel is a single-operator production engine for long-form narrated video channels, built for a creator who scripts, voices, and edits every episode alone. A seven-agent OpenAI GPT-4o mini pipeline drafts each act against a frozen channel format profile and a human-verified fact ledger, Deepgram nova-2 forced alignment times the narration against the scene list, and Remotion composes the final cut as React.',
+      challenge: 'Producing a long-form narrated episode by hand means writing a script in one tool, recording narration in another, hunting b-roll clip by clip, then rebuilding the same timeline in a desktop editor \u2014 and redoing all of it whenever a single line of narration changes.',
+      solution: 'I engineered AssemblyReel on Next.js 16, React 19, TypeScript and Supabase Postgres, with the whole generation stack running as server actions. It writes scripts act by act and holds for approval between them, casts characters once so appearance holds across chapters, re-times scenes from Deepgram word timings after any narration edit, and renders through Remotion locally or on AWS Lambda \u2014 one operator, one machine, one continuous pipeline.',
+      architecture: [
+        { label: 'Channel Blueprint & Fact Ledger', description: 'A per-channel format profile (act structure, framing devices, pacing) and a human-ticked source ledger are stored in Supabase Postgres under row-level security, then frozen onto the project so mid-production rule edits cannot retroactively rewrite approved acts.' },
+        { label: 'Act-By-Act Script Writer', description: 'script-writer.ts calls OpenAI gpt-4o-mini through the Vercel AI SDK\u2019s generateObject with Zod schemas, generating one act per invocation against the frozen profile and fact ledger rather than emitting a full script in a single unreviewable pass.' },
+        { label: 'Narration Synthesis & Forced Alignment', description: 'Narration is synthesised by OpenAI gpt-4o-mini-tts, ElevenLabs, or a local Voice Studio service on localhost:8880, then transcribed by Deepgram nova-2 prerecorded transcription; word-level timings are mapped back onto scenes to derive real on-screen durations.' },
+        { label: 'Seven-Agent Scene Enrichment', description: 'After the operator approves the act\u2019s narration, approveAndGenerateVisuals runs the slicer plus the casting director, visual architect, prompt assembler, safety officer, fact archivist, and thumbnail composer, throttled by a shared concurrency limiter, writing final_video_prompt per scene.' },
+        { label: 'Media Provider Registry', description: 'A registry in lib/ai/providers dispatches each prompt to Fal.ai (fal-ai/luma-dream-machine, fal-ai/kling-video/v1/standard/text-to-video, fal-ai/minimax/video-01), Google gemini-3-pro-image for stills, or a stock/mock fallback, downloading results to the local filesystem to survive CDN link rot.' },
+        { label: 'Timeline Editor & Remotion Preview', description: 'A bespoke drag-and-drop editor built on @remotion/player maps multi-track state to a live canvas, layering kinetic typography overlays (Typewriter, PopIn, SlideIn, LowerThird, ChapterCard), graphic-card templates, and transitions as ordinary React components.' },
+        { label: 'Render Pipeline', description: 'Local renders run @remotion/renderer inline inside a Next.js route handler against the MainVideo composition; an opt-in cloud path calls renderMediaOnLambda via @remotion/lambda, syncing assets to S3 and polling getRenderProgress with concurrency capped to stay under default AWS quotas.' },
+        { label: 'Persistence, Auth & Billing', description: 'Supabase handles Postgres storage and authentication through @supabase/ssr cookie sessions, with hand-run SQL migrations and row-level security policies per table; Stripe checkout, portal, and webhook route handlers reconcile subscription status onto the user profile.' }
+      ],
+      tools: ['Remotion 4.0.506 (@remotion/player, renderer, lambda)', 'OpenAI (gpt-4o-mini + gpt-4o-mini-tts)', 'Next.js 16.2.10 (App Router, Server Actions) + React 19.2.4', 'Supabase (PostgreSQL, Auth, RLS)', 'Deepgram (nova-2 forced alignment)', 'Fal.ai (Luma, Kling v1, MiniMax) + Google gemini-3-pro-image', 'AWS Lambda + S3', 'Vercel AI SDK v7 + Zod v4', 'Tailwind CSS v4', 'Stripe (subscriptions)'],
+      architectureLink: 'https://github.com/rmtaiautomation-ai/Assemblyreel.io/blob/main/docs/architecture.md'
+    }
+  },
+  {
+    title: 'AI Bookkeeper | Voice-Native Dual-Ledger Bookkeeping Engine',
+    role: 'Full-Stack AI Engineer',
+    impact: 'Spoken transactions become Schedule C-mapped ledger entries with human-verified tax fields',
+    language: { name: 'TypeScript', color: '#3178c6' },
+    description: 'A voice-native bookkeeping assistant that records, reviews, and tax-maps transactions across separate PHP personal and USD business ledgers, powered by Google Gemini 3.1 Flash Live over WebSockets with Firestore-backed function calling.',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?q=80&w=600&auto=format&fit=crop', // TODO: replace with real AI Bookkeeper screenshot
+    tags: ['Google Gemini 3.1 Live', 'React 19', 'TypeScript', 'Firebase Firestore', 'WebSockets', 'Tailwind CSS v4', 'Express', 'Frankfurter ECB API'],
+    primaryTag: 'Google Gemini 3.1 Live',
+    githubUrl: 'https://github.com/robotshelper-hue/AI-BOOKEEPER',
+    details: {
+      executiveSummary: 'AI Bookkeeper is a full-stack voice bookkeeping system for a sole operator running two separate books \u2014 a personal ledger in Philippine pesos and a business ledger in US dollars. A browser microphone stream is bridged over WebSockets to Google Gemini 3.1 Flash Live, which answers only through function-calling tools that read and write Firestore directly, so every total, duplicate flag, and exchange rate comes from queried data rather than model arithmetic.',
+      challenge: 'Running two books in two currencies meant manual spreadsheet entry, hand-conversion of peso business expenses to USD at whatever rate was handy, and duplicate rows surviving until filing season \u2014 with tax categories reconstructed from memory at year end by a user with limited vision.',
+      solution: 'I engineered a React 19 and Express application on Firebase Firestore that streams microphone audio to Google Gemini 3.1 Flash Live through a Node WebSocket bridge. I built a deterministic tool layer where the model calls Firestore-backed functions for review queues, duplicate groups, and spending summaries instead of computing them; two-step confirmation gates on deletes and tax-mapping verification; historical ECB rate lookups for every PHP-to-USD business entry; and a canonical, deterministic-ID tax mapping store. Voice entry now produces auditable, verification-gated books.',
+      architecture: [
+        { label: 'Firebase Auth & Ledger Scoping', description: 'Email/password sign-in through Firebase Auth establishes the userId that scopes every Firestore read and write; the user then selects Personal (PHP) or Business (USD), which fixes currency and category context for the session.' },
+        { label: 'Browser Audio Capture', description: 'The React client opens a 16 kHz AudioContext, converts Float32Array microphone frames to 16-bit PCM, base64-encodes them, and pushes them over a WebSocket; model audio returns on a separate 24 kHz output context for playback.' },
+        { label: 'Express WebSocket Bridge', description: 'A ws WebSocketServer mounted at /live on the Express HTTP server relays client audio to the Gemini Live session and forwards audio parts, input/output transcriptions, interruption, and turn-complete events back, keeping GEMINI_API_KEY server-side.' },
+        { label: 'Gemini Live Model Layer', description: 'ai.live.connect() opens a gemini-3.1-flash-live-preview session with Modality.AUDIO, per-mode system instructions and prebuilt voices (Aoede for Data Entry, Charon for Accountant, Kore for Advisor), and a mode-specific function-declaration set.' },
+        { label: 'Deterministic Tool & Safety Layer', description: 'Tool calls resolve in src/lib/voiceQueries.ts against Firestore: getReviewQueue, getPossibleDuplicates, getSpendingSummary, explainTaxMapping, and others. deleteTransaction and verifyTaxMapping are two-step \u2014 the first call writes nothing, and verification may only touch status, lastUpdated, and updatedBy.' },
+        { label: 'Currency Provenance Service', description: 'Business expenses entered in pesos are converted using api.frankfurter.dev/v1 historical ECB reference rates for the payment date; the API\u2019s echoed publication date is stored rather than the requested date, and a failed lookup throws instead of defaulting.' },
+        { label: 'Firestore Persistence & Tax Mapping Store', description: 'Transactions, categories, clients, recurring schedules, and tax mappings persist in Cloud Firestore under owner-only security rules. Tax mappings use a deterministic document id (userId__categoryId), so concurrent tabs cannot create a second record for one category.' },
+        { label: 'Batch Ingestion, Export & Deployment', description: 'Papa Parse CSV import runs auto-detection and normalization, then gemini-3.1-flash-lite returns structured category suggestions alongside key-based duplicate detection; CSV export blanks all four tax columns unless the mapping is Verified. Vite builds the SPA and esbuild bundles the server to dist/server.cjs for containerized Google Cloud Run deployment.' }
+      ],
+      tools: ['Google Gemini (3.1 Flash Live Preview, native audio + function calling)', 'Google Gemini (3.1 Flash / Flash Lite / Pro via @google/genai)', 'React 19 + Vite 6 (TypeScript 5.8, React Router 7)', 'Firebase (Auth + Cloud Firestore, RLS)', 'Express 4 + ws 8 (WebSocket audio bridge)', 'Tailwind CSS v4 + Lucide React', 'Frankfurter API (ECB reference rates)', 'Recharts 3 + Papa Parse'],
+      architectureLink: 'https://github.com/robotshelper-hue/AI-BOOKEEPER/blob/main/docs/system-architecture.md'
+    }
+  },
   {
     title: 'AI B2B Sales Training Simulator | Conversational Roleplay Engine',
     role: 'Full-Stack AI Engineer',

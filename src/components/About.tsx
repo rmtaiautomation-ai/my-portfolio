@@ -1,9 +1,10 @@
 import { useEffect, useRef, useState } from 'react';
-import { Route, PackageCheck, Sparkles, Layers, Zap, Award, TrendingUp, Code2, MapPin } from 'lucide-react';
-import profileImg from '../assets/profile.jpg';
+import { Route, PackageCheck, Sparkles, Layers, Zap, Award, TrendingUp, Code2, Brain, MapPin } from 'lucide-react';
+import profileImg from '../assets/hero-portrait.jpg';
 
 const BADGES = [
   { icon: <Zap size={14} />, label: 'Automation Specialist' },
+  { icon: <Brain size={14} />, label: 'LLM Engineering' },
   { icon: <Award size={14} />, label: 'Lead Gen Systems' },
   { icon: <TrendingUp size={14} />, label: 'Process Optimizer' },
   { icon: <Code2 size={14} />, label: 'Full-Stack Dev' },
@@ -23,7 +24,7 @@ const HIGHLIGHT_CARDS = [
   {
     icon: <Sparkles size={18} className="text-brand-blue" />,
     title: 'AI-Native',
-    desc: 'Agentic workflows, prompt engineering, and LLM tooling are part of my default stack, not a bolt-on.',
+    desc: 'Multi-agent pipelines, structured outputs, and LLM tooling are part of my default stack, not a bolt-on.',
   },
   {
     icon: <Layers size={18} className="text-brand-blue" />,
@@ -35,7 +36,7 @@ const HIGHLIGHT_CARDS = [
 const SKILLS = [
   { name: 'Workflow Automation (n8n / Make.com)', level: 95 },
   { name: 'API & Webhook Integration', level: 92 },
-  { name: 'AI & Agentic Systems', level: 90 },
+  { name: 'LLM Engineering & Agentic Systems', level: 92 },
   { name: 'Outbound Lead Generation', level: 90 },
   { name: 'Vibe Coding (Cursor / Claude Code)', level: 90 },
   { name: 'Prompt Engineering', level: 88 },
@@ -83,7 +84,7 @@ export default function About() {
 
         <div ref={ref} className="grid lg:grid-cols-2 gap-14 lg:gap-20">
           {/* Left column */}
-          <div>
+          <div className="flex flex-col">
             <div className="flex items-center gap-5 mb-8">
               <div className="relative shrink-0">
                 <div className="absolute inset-0 bg-brand-blue rounded-full blur-2xl opacity-40"></div>
@@ -94,12 +95,12 @@ export default function About() {
                   height={96}
                   loading="lazy"
                   decoding="async"
-                  className="relative w-20 h-20 md:w-24 md:h-24 object-cover rounded-full ring-1 ring-white/10"
+                  className="relative w-20 h-20 md:w-24 md:h-24 object-cover object-[50%_28%] rounded-full ring-1 ring-white/10"
                 />
               </div>
               <div>
                 <h2 className="font-display text-4xl md:text-5xl uppercase leading-none text-brand-text">Rommel Tima</h2>
-                <p className="text-brand-text-muted mt-1">AI Automation &amp; Full-Stack Specialist</p>
+                <p className="text-brand-text-muted mt-1">AI Automation, LLM Engineering &amp; Full-Stack Specialist</p>
                 <p className="text-brand-text-muted text-sm flex items-center gap-1.5 mt-1">
                   <MapPin size={14} className="text-brand-blue" /> Taguig, Philippines
                 </p>
@@ -120,31 +121,37 @@ export default function About() {
 
             <div className="space-y-4 text-brand-text-muted leading-relaxed">
               <p>
-                I'm an <span className="text-brand-text font-semibold">AI Automation &amp; AI Full-Stack Specialist</span> focused
-                on architecting intelligent workflows and high-performing web applications. I turn complex,
+                I'm an <span className="text-brand-text font-semibold">AI Automation, LLM Engineering &amp; Full-Stack Specialist</span>. I
+                architect intelligent workflows, multi-agent AI systems, and production web apps — turning complex,
                 multi-step processes into <span className="text-brand-blue font-semibold">seamless, scalable systems</span>.
               </p>
               <p>
-                Currently working as an <span className="text-brand-text font-semibold">Automation &amp; Lead Generation Specialist</span>,
-                I build and maintain automation systems with n8n, outbound lead-generation and video-prospecting
-                workflows, and AI appointment-setting campaigns.
+                My work spans agentic pipelines in <span className="text-brand-text font-semibold">n8n</span> and Make.com, voice AI,
+                LLM-powered content engines, and full-stack builds with <span className="text-brand-text font-semibold">Next.js, React, and Supabase</span> —
+                usually the whole path, from a rough idea to a deployed system that runs itself.
               </p>
               <p>
-                My goal is simple: engineer the automated engines and digital platforms that run quietly in the
-                background so businesses can focus on <span className="text-brand-blue font-semibold">exponential growth</span>.
+                Currently an <span className="text-brand-text font-semibold">Automation &amp; Lead Generation Specialist</span>. Recent builds:
+                an LLM-graded sales simulator, an autonomous video-production pipeline, and an outbound voice assistant —
+                engines that let a business focus on <span className="text-brand-blue font-semibold">growth</span>.
               </p>
             </div>
 
-            <div className="grid sm:grid-cols-2 gap-4 mt-10">
-              {HIGHLIGHT_CARDS.map((c) => (
-                <div key={c.title} className="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-blue/50 transition-colors">
-                  <div className="flex items-center gap-2 mb-2">
-                    {c.icon}
-                    <h3 className="font-bold text-brand-text text-sm">{c.title}</h3>
+            <div className="mt-auto pt-12">
+              <div className="grid sm:grid-cols-2 gap-4">
+                {HIGHLIGHT_CARDS.map((c) => (
+                  <div
+                    key={c.title}
+                    className="bg-brand-card border border-brand-border rounded-xl p-5 hover:border-brand-blue/50 transition-colors"
+                  >
+                    <div className="flex items-center gap-2 mb-2">
+                      {c.icon}
+                      <h3 className="font-bold text-brand-text text-sm">{c.title}</h3>
+                    </div>
+                    <p className="text-brand-text-muted text-xs leading-relaxed">{c.desc}</p>
                   </div>
-                  <p className="text-brand-text-muted text-xs leading-relaxed">{c.desc}</p>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
 

@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Mail, ArrowRight, Award } from 'lucide-react';
-import profileImg from '../assets/profile.jpg';
+import heroImg from '../assets/hero-portrait.jpg';
 
 const ROLES = [
   'AI Automation Specialist',
+  'LLM Engineer',
   'Full-Stack Developer',
   'Workflow Architect',
   'API Integrator',
@@ -11,7 +12,7 @@ const ROLES = [
 
 const STATS = [
   { value: '10+', label: 'Projects Shipped' },
-  { value: '29+', label: 'Tools & Platforms' },
+  { value: '35+', label: 'Tools & Platforms' },
   { value: '5+', label: 'Years in Tech' },
   { value: '100%', label: 'Client Focused' },
 ];
@@ -55,18 +56,17 @@ export default function Hero() {
         <div className="absolute top-1/3 right-0 w-[32rem] h-[32rem] bg-brand-blue/15 rounded-full blur-[150px]"></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center">
+      <div className="relative z-10 max-w-7xl mx-auto w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-12 lg:gap-16 items-center lg:items-stretch">
         {/* Left column */}
         <div className="flex flex-col">
           <p className="text-brand-blue text-xs sm:text-sm font-bold tracking-[0.25em] uppercase flex items-center gap-3 mb-6">
             <span className="w-10 h-px bg-brand-blue"></span>
-            AI Automation · Full-Stack Dev · Workflow Architect
+            AI Automation · LLM Engineering · Full-Stack Dev
           </p>
 
-          <h1 className="font-display uppercase leading-[0.86] tracking-tight text-[clamp(3.5rem,11vw,8rem)] heading-fade">
-            Rommel
-            <br />
-            Tima
+          <h1 className="font-display uppercase leading-[0.98] tracking-tight text-[clamp(3.5rem,11vw,8rem)] heading-fade">
+            <span className="block">Rommel</span>
+            <span className="block">Tima</span>
           </h1>
 
           <div className="flex items-center gap-3 mt-6 mb-6">
@@ -78,8 +78,8 @@ export default function Hero() {
           </div>
 
           <p className="text-brand-text-muted max-w-xl text-base md:text-lg leading-relaxed">
-            I build <span className="text-brand-text font-semibold">end-to-end automation systems</span>, AI-powered
-            web applications, and intelligent workflows that streamline operations and help businesses
+            I build <span className="text-brand-text font-semibold">end-to-end automation systems</span>, LLM-powered
+            applications, and agentic workflows that streamline operations and help businesses
             <span className="text-brand-blue font-semibold"> scale efficiently</span>.
           </p>
 
@@ -97,14 +97,14 @@ export default function Hero() {
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 mt-10">
             <button
               onClick={() => scrollTo('projects')}
-              className="group bg-brand-blue hover:bg-[#c0121f] text-white font-bold px-8 py-3.5 rounded-md text-sm tracking-wider transition-colors shadow-lg shadow-brand-blue/25 flex items-center justify-center gap-2"
+              className="group bg-brand-blue hover:bg-[#c0121f] text-white font-bold px-8 py-4 rounded-lg text-sm tracking-wider transition-colors shadow-lg shadow-brand-blue/30 flex items-center justify-center gap-2"
             >
               VIEW WORK
               <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
             </button>
             <button
               onClick={() => scrollTo('contact')}
-              className="bg-transparent hover:bg-brand-blue/10 text-brand-text font-bold px-8 py-3.5 rounded-md text-sm tracking-wider transition-colors border border-brand-border hover:border-brand-blue"
+              className="bg-brand-card hover:bg-brand-border/50 text-brand-text font-bold px-8 py-4 rounded-lg text-sm tracking-wider transition-colors border border-brand-border hover:border-brand-blue/60"
             >
               GET IN TOUCH
             </button>
@@ -141,30 +141,32 @@ export default function Hero() {
         </div>
 
         {/* Right column - portrait */}
-        <div className="relative mx-auto w-full max-w-sm lg:max-w-md">
-          <div className="absolute -inset-6 bg-brand-blue/25 rounded-3xl blur-3xl"></div>
-          <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
-            <img
-              src={profileImg}
-              alt="Rommel Tima"
-              width={480}
-              height={600}
-              fetchPriority="high"
-              className="w-full aspect-[4/5] object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"></div>
-          </div>
+        <div className="mx-auto w-full max-w-sm lg:max-w-lg lg:self-stretch lg:flex lg:flex-col lg:justify-center">
+          <div className="relative lg:h-[90%]">
+            <div className="absolute -inset-6 bg-brand-blue/25 rounded-3xl blur-3xl"></div>
+            <div className="relative rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl h-full">
+              <img
+                src={heroImg}
+                alt="Rommel Tima"
+                width={896}
+                height={1200}
+                fetchPriority="high"
+                className="w-full h-full aspect-[3/4] lg:aspect-auto object-cover object-[50%_30%]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-brand-dark/70 via-transparent to-transparent"></div>
+            </div>
 
-          {/* Floating chips */}
-          <div className="absolute -top-4 right-3 bg-brand-card/90 backdrop-blur border border-brand-border rounded-lg px-4 py-2.5 shadow-xl">
-            <div className="text-sm font-bold text-brand-text">n8n · Make.com</div>
-            <div className="text-[0.7rem] text-brand-text-muted">Automation Specialist</div>
-          </div>
-          <div className="absolute -bottom-5 -left-3 bg-brand-blue text-white rounded-lg px-4 py-2.5 shadow-xl flex items-center gap-2.5">
-            <Award size={20} />
-            <div>
-              <div className="text-sm font-bold leading-tight">Full-Stack</div>
-              <div className="text-[0.7rem] opacity-90 leading-tight">React · Next.js · Supabase</div>
+            {/* Floating chips */}
+            <div className="absolute -top-4 right-3 bg-brand-card/90 backdrop-blur border border-brand-border rounded-lg px-4 py-2.5 shadow-xl">
+              <div className="text-sm font-bold text-brand-text">n8n · Make.com</div>
+              <div className="text-[0.7rem] text-brand-text-muted">Automation Specialist</div>
+            </div>
+            <div className="absolute -bottom-5 -left-3 bg-brand-blue text-white rounded-lg px-4 py-2.5 shadow-xl flex items-center gap-2.5">
+              <Award size={20} />
+              <div>
+                <div className="text-sm font-bold leading-tight">Full-Stack</div>
+                <div className="text-[0.7rem] opacity-90 leading-tight">React · Next.js · Supabase</div>
+              </div>
             </div>
           </div>
         </div>
