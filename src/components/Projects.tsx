@@ -35,7 +35,8 @@ const projects = [
         { label: 'Persistence, Auth & Billing', description: 'Supabase handles Postgres storage and authentication through @supabase/ssr cookie sessions, with hand-run SQL migrations and row-level security policies per table; Stripe checkout, portal, and webhook route handlers reconcile subscription status onto the user profile.' }
       ],
       tools: ['Remotion 4.0.506 (@remotion/player, renderer, lambda)', 'OpenAI (gpt-4o-mini + gpt-4o-mini-tts)', 'Next.js 16.2.10 (App Router, Server Actions) + React 19.2.4', 'Supabase (PostgreSQL, Auth, RLS)', 'Deepgram (nova-2 forced alignment)', 'Fal.ai (Luma, Kling v1, MiniMax) + Google gemini-3-pro-image', 'AWS Lambda + S3', 'Vercel AI SDK v7 + Zod v4', 'Tailwind CSS v4', 'Stripe (subscriptions)'],
-      architectureLink: 'https://github.com/rmtaiautomation-ai/Assemblyreel.io/blob/main/docs/architecture.md'
+      architectureLink: 'https://github.com/rmtaiautomation-ai/Assemblyreel.io/blob/main/docs/architecture.md',
+      videoUrl: 'https://www.youtube.com/embed/x4azCs0Tm44'
     }
   },
   {
