@@ -100,7 +100,7 @@ export default function About() {
               </div>
               <div>
                 <h2 className="font-display text-4xl md:text-5xl uppercase leading-none text-brand-text">Rommel Tima</h2>
-                <p className="text-brand-text-muted mt-1">AI Automation, LLM Engineering &amp; Full-Stack Specialist</p>
+                <p className="text-brand-text-muted mt-1">AI Automation Specialist &amp; AI Full-Stack Engineer</p>
                 <p className="text-brand-text-muted text-sm flex items-center gap-1.5 mt-1">
                   <MapPin size={14} className="text-brand-blue" /> Taguig, Philippines
                 </p>
@@ -121,19 +121,18 @@ export default function About() {
 
             <div className="space-y-4 text-brand-text-muted leading-relaxed">
               <p>
-                I'm an <span className="text-brand-text font-semibold">AI Automation, LLM Engineering &amp; Full-Stack Specialist</span>. I
-                architect intelligent workflows, multi-agent AI systems, and production web apps — turning complex,
-                multi-step processes into <span className="text-brand-blue font-semibold">seamless, scalable systems</span>.
+                I'm an <span className="text-brand-text font-semibold">AI Automation Specialist &amp; AI Full-Stack Engineer</span>. I
+                architect intelligent workflows, multi-agent AI systems, and modern web applications — turning complex
+                business bottlenecks into <span className="text-brand-blue font-semibold">seamless, scalable systems</span>.
               </p>
               <p>
-                My work spans agentic pipelines in <span className="text-brand-text font-semibold">n8n</span>, voice AI with <span className="text-brand-text font-semibold">Twilio</span>, infrastructure on <span className="text-brand-text font-semibold">Hetzner</span>,
-                LLM-powered content engines, and full-stack builds with <span className="text-brand-text font-semibold">Next.js, React, and Supabase</span> —
-                usually the whole path, from a rough idea to a deployed system that runs itself.
+                My approach centers on leveraging <span className="text-brand-text font-semibold">agentic AI and LLMs</span> for
+                deep brainstorming, system architecture, and automated execution. I bridge full-stack engineering with modern development
+                tools — rapidly mastering emerging technologies to take projects from a rough concept to a self-sustaining system.
               </p>
               <p>
-                Currently an <span className="text-brand-text font-semibold">Automation &amp; Lead Generation Specialist</span>. Recent builds:
-                an LLM-graded sales simulator, an autonomous video-production pipeline, and an outbound voice assistant —
-                engines that let a business focus on <span className="text-brand-blue font-semibold">growth</span>.
+                Currently building production solutions that automate operations, voice interaction, and lead generation pipelines.
+                Driven by a continuous learning mindset, I build resilient software and smart automations that let businesses focus on <span className="text-brand-blue font-semibold">growth</span>.
               </p>
             </div>
 
