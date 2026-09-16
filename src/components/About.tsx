@@ -34,7 +34,7 @@ const HIGHLIGHT_CARDS = [
 ];
 
 const SKILLS = [
-  { name: 'Workflow Automation (n8n / Make.com)', level: 95 },
+  { name: 'Workflow Automation (n8n)', level: 95 },
   { name: 'API & Webhook Integration', level: 92 },
   { name: 'LLM Engineering & Agentic Systems', level: 92 },
   { name: 'Outbound Lead Generation', level: 90 },
@@ -126,7 +126,7 @@ export default function About() {
                 multi-step processes into <span className="text-brand-blue font-semibold">seamless, scalable systems</span>.
               </p>
               <p>
-                My work spans agentic pipelines in <span className="text-brand-text font-semibold">n8n</span> and Make.com, voice AI,
+                My work spans agentic pipelines in <span className="text-brand-text font-semibold">n8n</span>, voice AI with <span className="text-brand-text font-semibold">Twilio</span>, infrastructure on <span className="text-brand-text font-semibold">Hetzner</span>,
                 LLM-powered content engines, and full-stack builds with <span className="text-brand-text font-semibold">Next.js, React, and Supabase</span> —
                 usually the whole path, from a rough idea to a deployed system that runs itself.
               </p>

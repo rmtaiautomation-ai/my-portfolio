@@ -74,13 +74,12 @@ const tools: Tool[] = [
 ];
 
 const duties = [
-  'Building and maintaining automation systems using n8n and related tools',
-  'Building outbound lead generation workflows',
-  'Building video prospecting systems',
-  'Lead gathering, scraping coordination, list building, and data enrichment',
-  'Supporting AI appointment setting campaigns',
-  'Learning new AI tools and increasing AI knowledge relevant to company operations',
-  'Improving workflows, efficiency, and automation systems',
+  'Full-stack web development leveraging AI and Vibe Coding (Cursor/Claude Code)',
+  'Architecting and building a centralized company dashboard with Cal.com integration, meeting management, and real-time notifications',
+  'Developing secure chat and messaging features for internal communications',
+  'Building and maintaining complex agentic workflows and automation systems using n8n',
+  'Designing outbound lead generation, video prospecting, and data enrichment pipelines',
+  'Deploying and managing scalable infrastructure and voice solutions using Twilio and Hetzner',
 ];
 
 const coursework = [
@@ -117,7 +116,7 @@ export default function Experience() {
               <div className="absolute w-3 h-3 bg-brand-blue rounded-full -left-[6.5px] top-1.5 shadow-[0_0_10px_rgba(225,29,42,0.7)]"></div>
 
               <div className="text-brand-blue text-sm font-semibold mb-1">Present</div>
-              <h4 className="text-lg font-bold text-brand-text">Automation &amp; Lead Generation Specialist</h4>
+              <h4 className="text-lg font-bold text-brand-text">AI Automation Specialist &amp; Full-Stack Developer</h4>
               <div className="text-brand-text-muted text-xs font-semibold uppercase tracking-widest mt-2 mb-4">
                 Duties &amp; Responsibilities
               </div>
