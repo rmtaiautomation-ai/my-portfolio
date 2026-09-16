@@ -11,9 +11,9 @@ const ROLES = [
 ];
 
 const STATS = [
-  { value: '10+', label: 'Projects Shipped' },
+  { value: '10+', label: 'Systems Built' },
   { value: '35+', label: 'Tools & Platforms' },
-  { value: '5+', label: 'Years in Tech' },
+  { value: '100%', label: 'AI-Native' },
   { value: '100%', label: 'Client Focused' },
 ];
 
