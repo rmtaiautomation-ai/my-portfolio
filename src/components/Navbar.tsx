@@ -83,12 +83,14 @@ export default function Navbar() {
 
         {/* Resume + mobile toggle */}
         <div className="flex items-center gap-3">
-          <button
-            onClick={() => go('contact')}
-            className="hidden sm:inline-flex bg-brand-blue hover:bg-[#c0121f] text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg shadow-lg shadow-brand-blue/30 transition-colors"
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden sm:inline-flex items-center justify-center bg-brand-blue hover:bg-[#c0121f] text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg shadow-lg shadow-brand-blue/30 transition-colors"
           >
             Resume
-          </button>
+          </a>
           <button
             onClick={() => setMenuOpen((o) => !o)}
             className="lg:hidden p-2 text-brand-text"
@@ -113,12 +115,15 @@ export default function Navbar() {
               {l.label}
             </button>
           ))}
-          <button
-            onClick={() => go('contact')}
-            className="mt-2 bg-brand-blue text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg"
+          <a
+            href="/resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="mt-2 text-center bg-brand-blue text-white font-bold text-xs tracking-widest uppercase px-5 py-3 rounded-lg"
           >
             Resume
-          </button>
+          </a>
         </div>
       )}
     </nav>
