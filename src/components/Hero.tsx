@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { ChevronDown, Mail, ArrowRight, Award } from 'lucide-react';
-import heroImg from '../assets/hero-portrait.jpg';
+import heroImg from '../assets/newpro.png';
 
 const ROLES = [
   'AI Automation Specialist',

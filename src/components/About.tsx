@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Route, PackageCheck, Sparkles, Layers, Zap, Award, TrendingUp, Code2, Brain, MapPin } from 'lucide-react';
-import profileImg from '../assets/hero-portrait.jpg';
+import profileImg from '../assets/newpro.png';
 
 const BADGES = [
   { icon: <Zap size={14} />, label: 'Automation Specialist' },
